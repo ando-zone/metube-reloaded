@@ -1,0 +1,30 @@
+extends base.pug
+
+block content
+    if errorMessage
+        span=errorMessage
+    form(method="POST")
+        label(for="name") Name:
+        input#name(placeholder="Name", name="name", type="text", required)
+        
+        label(for="email") Email:
+        input#email(placeholder="Email", name="email", type="email", required)
+        
+        label(for="username") Username:
+        input#username(placeholder="Username", name="username", type="text", required)
+        
+        label(for="password") Password:
+        input#password(placeholder="Password", name="password", type="password", required)
+
+        label(for="password") Confirm Password:
+        input(placeholder="Confirm Password", name="password2", type="password", required)
+        
+        label(for="location") Location:
+        input#location(placeholder="Location", name="location", type="text", required)
+        
+        input(type="submit", value="Join")
+
+    hr
+    div
+        span Already have an account? 
+        a(href="/login") Log in now &rarr;
